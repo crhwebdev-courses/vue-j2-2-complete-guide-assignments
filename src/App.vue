@@ -7,15 +7,15 @@
     <ServerStatus></ServerStatus>
 
     <hr />
+
     <Footer></Footer>
   </div>
 </template>
 
 <script>
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import ServerStatus from "./components/ServerStatus";
-import ServerDetail from "./components/ServerDetail";
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
+import ServerStatus from "./components/ServerStatus.vue";
 export default {
   name: "App",
   components: {

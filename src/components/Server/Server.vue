@@ -5,13 +5,13 @@
 </template>
 
 <script>
+import { eventBus } from "../../main.js";
 export default {
   name: "Server",
   props: ["serverData"],
   methods: {
     updateServerDetails() {
-      this.$emit("serverDetailsUpdated", this.serverData);
-      console.log("clicked server", this.serverData.id);
+      eventBus.$emit("serverDetailsUpdated", this.serverData);
     }
   }
 };

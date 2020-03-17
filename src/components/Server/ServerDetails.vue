@@ -1,14 +1,12 @@
 <template>
-  <div
-    class="col-xs-12 col-sm-6"
-    @serverDetailsUpdated="updateServerDetailsView"
-  >
+  <div class="col-xs-12 col-sm-6">
     <p v-if="!details">Server Details are currently not updated</p>
     <p v-else>Server details are updated</p>
   </div>
 </template>
 
 <script>
+import { eventBus } from "../../main.js";
 export default {
   name: "ServerDetails",
   data: function() {
@@ -16,11 +14,10 @@ export default {
       details: null
     };
   },
-  methods: {
-    updateServerDetailsView() {
-      //   this.details = event;
-      console.log("updated details");
-    }
+  created() {
+    eventBus.$on("serverDetailsUpdated", serverData => {
+      this.details = serverData;
+    });
   }
 };
 </script>

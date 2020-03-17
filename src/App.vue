@@ -13,10 +13,12 @@
           Load Red Template
         </button>
         <hr />
-        <component :is="selectedComponent">
-          <h1 slot="headline">This is the {{ color }} Component</h1>
-          <p slot="content">This is where the content text would go.</p>
-        </component>
+        <keep-alive>
+          <component :is="selectedComponent">
+            <h1 slot="headline">This is the {{ color }} Component</h1>
+            <p slot="content">This is where the content text would go.</p>
+          </component>
+        </keep-alive>
       </div>
     </div>
   </div>

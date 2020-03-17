@@ -12,7 +12,12 @@ export default {
   name: "Servers",
   data: function() {
     return {
-      servers: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }]
+      servers: [
+        { id: 1, status: "Normal" },
+        { id: 2, status: "Critical" },
+        { id: 3, status: "Unknown" },
+        { id: 4, status: "Normal" }
+      ]
     };
   },
   components: {

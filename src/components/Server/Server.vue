@@ -5,6 +5,9 @@
 <script>
 export default {
   name: "Server",
-  props: ["serverData"]
+  props: ["serverData"],
+  methods: {
+    updateServerDetails() {}
+  }
 };
 </script>

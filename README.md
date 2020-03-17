@@ -2,9 +2,14 @@
 
 > A Vue.js project
 
+## Assignment Description
+
+1. Pass some text or html to each of three pre-defined components using slots
+2. Display only one of these components based on button presses using dynamic components.
+
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 

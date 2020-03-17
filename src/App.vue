@@ -13,16 +13,9 @@
           Load Red Template
         </button>
         <hr />
-        <p>Selected Component: {{ selectedComponent }}</p>
-        <app-blue>
-          <h1>This the Blue Component</h1>
-        </app-blue>
-        <app-green>
-          <h1>This the Green Component</h1>
-        </app-green>
-        <app-red>
-          <h1>This the Red Component</h1>
-        </app-red>
+        <component :is="selectedComponent">
+          <h1>This is the {{ color }} Component</h1>
+        </component>
       </div>
     </div>
   </div>
@@ -43,6 +36,20 @@ export default {
     return {
       selectedComponent: "appBlue"
     };
+  },
+  computed: {
+    color: function() {
+      switch (this.selectedComponent) {
+        case "appBlue":
+          return "Blue";
+        case "appGreen":
+          return "Green";
+        case "appRed":
+          return "Red";
+        default:
+          return "Error";
+      }
+    }
   }
 };
 </script>

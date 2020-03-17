@@ -1,6 +1,7 @@
 <template>
   <div>
-    <slot></slot>
+    <slot name="headline"></slot>
+    <slot name="content"></slot>
   </div>
 </template>
 

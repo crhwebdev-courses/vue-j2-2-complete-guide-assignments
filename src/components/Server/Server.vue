@@ -1,5 +1,7 @@
 <template>
-  <li class="list-group-item">Server #{{ serverData.id }}</li>
+  <li class="list-group-item" @click="updateServerDetails">
+    Server #{{ serverData.id }}
+  </li>
 </template>
 
 <script>
@@ -7,7 +9,10 @@ export default {
   name: "Server",
   props: ["serverData"],
   methods: {
-    updateServerDetails() {}
+    updateServerDetails() {
+      this.$emit("serverDetailsUpdated", this.serverData);
+      console.log("clicked server", this.serverData.id);
+    }
   }
 };
 </script>

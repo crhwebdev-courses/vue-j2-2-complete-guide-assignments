@@ -1,7 +1,11 @@
 <template>
   <div class="col-xs-12 col-sm-6">
     <ul class="list-group">
-      <Server v-for="server in servers" :serverData="server"></Server>
+      <Server
+        @click="updateServerDetails"
+        v-for="server in servers"
+        :serverData="server"
+      ></Server>
     </ul>
   </div>
 </template>
@@ -22,7 +26,8 @@ export default {
   },
   components: {
     Server
-  }
+  },
+  methods: {}
 };
 </script>
 

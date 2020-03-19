@@ -21,6 +21,10 @@
 </template>
 
 <script>
+//This control works by excepting the 'value' from v-model binding on component in app and setting the controls displayed
+// using value attribute
+//Then it signals the default input event with custom logic. This bubbles up to App and is intercepted by the v-model binding
+// to make a change to the data model
 export default {
   name: "FullName",
   props: ["value"],

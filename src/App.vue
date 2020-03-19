@@ -63,7 +63,6 @@
                 id="yes"
                 name="yes"
                 value="yes"
-                checked
                 v-model="storeInDatabase"
               />
               <label class="form-check-label" for="yes">Yes</label>

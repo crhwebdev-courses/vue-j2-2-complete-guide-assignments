@@ -21,12 +21,20 @@
           <!-- which still holds the First Name and Last Name Input Field -->
           <form>
             <div class="form-group">
-              <label for="">Full Name</label>
+              <div>Full Name</div>
+              <label for="">First Name</label>
               <input
                 class="form-control"
                 type="text"
-                id="full-name"
-                v-model="userData.fullName"
+                id="first-name"
+                v-model="userData.firstName"
+              />
+              <label for="">Last Name</label>
+              <input
+                class="form-control"
+                type="text"
+                id="last-name"
+                v-model="userData.lastName"
               />
             </div>
             <div class="form-group">
@@ -84,7 +92,7 @@
             <h4>Your Data</h4>
           </div>
           <div class="panel-body">
-            <p>Full Name: {{ userData.fullName }}</p>
+            <p>Full Name: {{ fullName }}</p>
             <p>Mail: {{ userData.email }}</p>
             <p>Password: {{ userData.password }}</p>
             <p>Store in Database?: {{ storeInDatabase }}</p>
@@ -100,13 +108,19 @@ export default {
   data() {
     return {
       userData: {
-        fullName: "",
+        firstName: "",
+        lastName: "",
         email: "",
         password: ""
       },
       storeInDatabase: "yes",
       formSubmited: false
     };
+  },
+  computed: {
+    fullName() {
+      return `${this.userData.firstName} ${this.userData.lastName}`;
+    }
   },
   methods: {
     submitForm() {

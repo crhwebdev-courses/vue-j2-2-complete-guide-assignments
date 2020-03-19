@@ -1,12 +1,18 @@
 # vue-cli
 
-A Vue.js project created for the Udemy course: VueJS 2 Complete Guide that contains all assignments for the course. Each branch contains one assignment
+Assignment 10: Custom Directives
 
-## Branches
+## Build Setup
 
-Each branch contains one assignment. Currently completed assignments include:
+```bash
+# install dependencies
+npm install
 
-- assignment6
-- assignment7
-- assignment8
-- assignment9
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+```
+
+For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).

@@ -20,23 +20,7 @@
           <!-- Edit the Example from above and create a custom "Full Name" Control -->
           <!-- which still holds the First Name and Last Name Input Field -->
           <form>
-            <div class="form-group box">
-              <h3>Full Name</h3>
-              <label for="">First Name</label>
-              <input
-                class="form-control"
-                type="text"
-                id="first-name"
-                v-model="userData.firstName"
-              />
-              <label for="">Last Name</label>
-              <input
-                class="form-control"
-                type="text"
-                id="last-name"
-                v-model="userData.lastName"
-              />
-            </div>
+            <app-full-name v-model="userData.fullName" />
             <div class="form-group">
               <label for="">Email</label>
               <input
@@ -91,7 +75,7 @@
             <h4>Your Data</h4>
           </div>
           <div class="panel-body">
-            <p>Full Name: {{ fullName }}</p>
+            <p>Full Name: {{ userData.fullName }}</p>
             <p>Mail: {{ userData.email }}</p>
             <p>Password: {{ userData.password }}</p>
             <p>Store in Database?: {{ storeInDatabase }}</p>
@@ -103,12 +87,12 @@
 </template>
 
 <script>
+import FullName from "./components/FullName.vue";
 export default {
   data() {
     return {
       userData: {
-        firstName: "",
-        lastName: "",
+        fullName: "Carl Hain",
         email: "",
         password: ""
       },
@@ -116,10 +100,8 @@ export default {
       formSubmited: false
     };
   },
-  computed: {
-    fullName() {
-      return `${this.userData.firstName} ${this.userData.lastName}`;
-    }
+  components: {
+    appFullName: FullName
   },
   methods: {
     submitForm() {
@@ -129,11 +111,4 @@ export default {
 };
 </script>
 
-<style>
-.box {
-  border: 2px solid black;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 20px;
-}
-</style>
+<style></style>

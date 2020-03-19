@@ -20,8 +20,8 @@
           <!-- Edit the Example from above and create a custom "Full Name" Control -->
           <!-- which still holds the First Name and Last Name Input Field -->
           <form>
-            <div class="form-group">
-              <div>Full Name</div>
+            <div class="form-group box">
+              <h3>Full Name</h3>
               <label for="">First Name</label>
               <input
                 class="form-control"
@@ -56,7 +56,7 @@
               />
             </div>
             <div class="form-check">
-              <div>Store In Database?</div>
+              <h3>Store In Database?</h3>
               <input
                 class="form-check-input"
                 type="radio"
@@ -66,7 +66,7 @@
                 checked
                 v-model="storeInDatabase"
               />
-              <label for="yes">Yes</label>
+              <label class="form-check-label" for="yes">Yes</label>
               <input
                 class="form-check-input"
                 type="radio"
@@ -75,7 +75,7 @@
                 value="no"
                 v-model="storeInDatabase"
               />
-              <label for="no">No</label>
+              <label class="form-check-label" for="no">No</label>
             </div>
             <button class="btn btn-primary" @click.prevent="submitForm">
               Submit
@@ -130,4 +130,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.box {
+  border: 2px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+</style>

@@ -19,26 +19,38 @@
           <!-- Exercise 3 -->
           <!-- Edit the Example from above and create a custom "Full Name" Control -->
           <!-- which still holds the First Name and Last Name Input Field -->
-          <form action="">
-            <div>
+          <form>
+            <div class="form-group">
               <label for="">Full Name</label>
-              <input type="text" id="full-name" v-model="userData.fullName" />
+              <input
+                class="form-control"
+                type="text"
+                id="full-name"
+                v-model="userData.fullName"
+              />
             </div>
-            <div>
+            <div class="form-group">
               <label for="">Email</label>
-              <input type="text" id="email" v-model="userData.email" />
+              <input
+                class="form-control"
+                type="text"
+                id="email"
+                v-model="userData.email"
+              />
             </div>
-            <div>
+            <div class="form-group">
               <label for="">Password</label>
               <input
+                class="form-control"
                 type="password"
                 id="password"
                 v-model="userData.password"
               />
             </div>
-            <div>
+            <div class="form-check">
               <div>Store In Database?</div>
               <input
+                class="form-check-input"
                 type="radio"
                 id="yes"
                 name="yes"
@@ -48,6 +60,7 @@
               />
               <label for="yes">Yes</label>
               <input
+                class="form-check-input"
                 type="radio"
                 id="no"
                 name="no"
@@ -56,7 +69,9 @@
               />
               <label for="no">No</label>
             </div>
-            <button @click.prevent="submitForm">Submit</button>
+            <button class="btn btn-primary" @click.prevent="submitForm">
+              Submit
+            </button>
           </form>
         </div>
       </div>

@@ -6,7 +6,8 @@ A Vue.js project created for the Udemy course: VueJS 2 Complete Guide that conta
 
 Each branch contains one assignment. Currently completed assignments include:
 
-- assignment6
-- assignment7
-- assignment8
-- assignment9
+- assignment6 (Introduction to Components)
+- assignment7 (Communication Between Components)
+- assignment8 (Advanced Components)
+- assignment9 (Forms)
+- assignment10 (Directives)

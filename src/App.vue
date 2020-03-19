@@ -56,12 +56,13 @@
               />
               <label for="no">No</label>
             </div>
+            <button @click.prevent="submitForm">Submit</button>
           </form>
         </div>
       </div>
     </form>
     <hr />
-    <div class="row">
+    <div class="row" v-if="formSubmited">
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -88,8 +89,14 @@ export default {
         email: "",
         password: ""
       },
-      storeInDatabase: "yes"
+      storeInDatabase: "yes",
+      formSubmited: false
     };
+  },
+  methods: {
+    submitForm() {
+      this.formSubmited = true;
+    }
   }
 };
 </script>

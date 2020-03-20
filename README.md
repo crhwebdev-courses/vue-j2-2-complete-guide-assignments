@@ -11,3 +11,4 @@ Each branch contains one assignment. Currently completed assignments include:
 - assignment8 (Advanced Components)
 - assignment9 (Forms)
 - assignment10 (Directives)
+- assignment11 (Filters & Mixins)

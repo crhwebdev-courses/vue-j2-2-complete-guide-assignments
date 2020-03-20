@@ -15,8 +15,23 @@ Vue.filter("appendLength", function(value) {
 });
 
 Vue.mixin({
-  created() {
-    console.log("Global Mixin - Created Hook");
+  data() {
+    return {
+      text1: "Some Text",
+      text2: "Verylongstringofcharacters"
+    };
+  },
+  computed: {
+    reverseText1() {
+      return this.text1
+        .split("")
+        .reverse()
+        .join("");
+    },
+    countText2() {
+      let len = this.text2.length;
+      return `${this.text2} (${len})`;
+    }
   }
 });
 

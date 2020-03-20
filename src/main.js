@@ -9,7 +9,7 @@ Vue.filter("to-lowercase", function(value) {
         <!-- Build a global Filter which counts the length of a word and it appends it -->
         <!-- Like this: "Test" => Gets Filtered to => "Test (4)" -->
 */
-Vue.filter("append-length", function(value) {
+Vue.filter("appendLength", function(value) {
   let len = value.length;
   return `${value} (${len})`;
 });

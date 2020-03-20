@@ -5,7 +5,7 @@
         <h1>Directives Exercise</h1>
         <!-- Exercise -->
         <!-- Build a Custom Directive which works like v-on (Listen for Events) -->
-        <p v-myon:click="{ stuffios: stuff, otherStuff }">
+        <p v-myon:click="{ stuff, otherStuff }">
           Click Me!
         </p>
       </div>
@@ -21,14 +21,19 @@ export default {
     myon: {
       bind: function(el, binding, vnode) {
         const fns = binding.value;
-        el.addEventListener(binding.arg, e => {
-          console.log("clicked");
-          for (let prop in fns) {
-            let fn = fns[prop];
-            if (fns.hasOwnProperty(prop) && typeof fn === "function") {
+        const eventType = binding.arg;
+        el.addEventListener(eventType, e => {
+          Object.values(fns).forEach(fn => {
+            if (typeof fn === "function") {
               fn(e);
             }
-          }
+          });
+          //   for (let prop in fns) {
+          //     let fn = fns[prop];
+          //     if (fns.hasOwnProperty(prop) && typeof fn === "function") {
+          //       fn(e);
+          //     }
+          //   }
         });
       }
     }

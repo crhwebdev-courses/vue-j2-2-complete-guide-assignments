@@ -28,12 +28,6 @@ export default {
               fn(e);
             }
           });
-          //   for (let prop in fns) {
-          //     let fn = fns[prop];
-          //     if (fns.hasOwnProperty(prop) && typeof fn === "function") {
-          //       fn(e);
-          //     }
-          //   }
         });
       }
     }
